@@ -23,3 +23,7 @@ jobs:
         arch: x64 # optional, default is x64
     - name: Build
       run: msbuild "Minecraft Multiple Command Combiner/Minecraft Multiple Command Combiner.csproj"
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Output
+        path: / # or path/to/artifact
