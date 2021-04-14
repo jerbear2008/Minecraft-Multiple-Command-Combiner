@@ -20,9 +20,11 @@ jobs:
       uses: egor-tensin/vs-shell@v2
       with:
         # Target architecture
-        arch: x64 # optional, default is x64
+        arch: x64 # optional, default is x64    
     - name: Build
       run: msbuild "Minecraft Multiple Command Combiner/Minecraft Multiple Command Combiner.csproj"
+    - name: ls
+      run: ls
     - uses: actions/upload-artifact@v2
       with:
         name: Output
